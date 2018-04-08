@@ -7,23 +7,26 @@ using System.Linq;
 
 public class GameManager : MonoBehaviour {
 
-    public GameObject pages; 
-    public GameObject pagenum;
+    public GameObject Pages; 
+    public GameObject Pagenum;
     public GameObject GameText;
     public GameObject AllMoneyText;
+    public GameObject How_to_useText;
+    public GameObject PriceText;
     public GameObject BuyButton;
     public GameObject SaleButton;
     public GameObject YesButton;
     public GameObject NoButton;
 
-    public GameObject[] page = new GameObject[36];
+    public GameObject[] Page = new GameObject[36];      //アイテム欄の配列
+    public GameObject[] PickItem = new GameObject[10];  //選択されているアイテムを入れる配列
 
     int pagei = 0;
     int spriteflg;
     int num;
-    int w;
-    int Allprice = 0;
-    public int Max = 0;
+    int pickItemnum = 0;
+    int allMoney = 0;
+    public int max = 0;
     public int price = 0;
     int salenum = 0;
 
@@ -36,99 +39,96 @@ public class GameManager : MonoBehaviour {
     public Sprite bean;
 
     string pagenumtext;
-    bool endflg;
-    bool SaleEnd;
+    bool saleEnd;
     bool pick;
-    bool last;
-    public bool SaleState;
+    public bool saleState;
 
     // Use this for initialization
     void Start () {
         num = 1;
-        w = 0;
-        endflg = true;
 
-        SaleState = false;
+        saleState = false;
 
-        SaleEnd = false;
+        saleEnd = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		//Textが表示されているときクリックで消す
         if((Input.GetMouseButton(0)) && (GameText == true))
         {
             GameText.SetActive(false);
         }
 	}
+    //TitleSceneからのシーン遷移
     public void PushButtonStart()
     {
         SceneManager.LoadScene(1);
     }
 
-    //左ボタンを押したときの処理
+    //ButtonLeftを押したときの処理
     public void PushButtonLeft()
     {
-        pagenumtext = pagenum.GetComponent<Text>().text;        //ページの番号をpagenumtextに
+        pagenumtext = Pagenum.GetComponent<Text>().text;        //ページの番号をpagenumtextに
         //1ページ目以外の時は左にページ変更
         if (pagenumtext != "1")
         {
-            pages.transform.Translate(360, 0, 0);
+            Pages.transform.Translate(360, 0, 0);
             num = num - 1;
-            pagenum.GetComponent<Text>().text = num.ToString();
+            Pagenum.GetComponent<Text>().text = num.ToString();
         }
         
     }
-    //右ボタンを押したときの処理
+    //ButtonRightを押したときの処理
     public void PushButtonRight()
     {
-        pagenumtext = pagenum.GetComponent<Text>().text;
+        pagenumtext = Pagenum.GetComponent<Text>().text;
         //3ページ目以外の時は右にページ変更
         if (pagenumtext != "3")
         {
-            pages.transform.Translate(-360, 0, 0);
+            Pages.transform.Translate(-360, 0, 0);
             num = num + 1;
-            pagenum.GetComponent<Text>().text = num.ToString();
+            Pagenum.GetComponent<Text>().text = num.ToString();
         }
     }
     //アイテムを手に入れる処理（）
     public void PushButtonBuy()
     {
-        if(page[35].GetComponent<Image>().sprite == null)
+        //アイテム欄の最後が空いてる場合
+        if(Page[35].GetComponent<Image>().sprite == null)
         {
-            spriteflg = Random.Range(1, 5);
+            //ランダムでButtonにアイテムの画像を入れる
+            //子の非表示のTextにアイテム名を入れる
+            spriteflg = Random.Range(1, 6);
             if(spriteflg == 1)
             {
-                page[pagei].GetComponent<Image>().sprite = bone;
-                page[pagei].GetComponentInChildren<Text>().text = "bone";
+                Page[pagei].GetComponent<Image>().sprite = bone;
+                Page[pagei].GetComponentInChildren<Text>().text = "bone";
             }
             else if (spriteflg == 2)
             {
-                page[pagei].GetComponent<Image>().sprite = ant;
-                page[pagei].GetComponentInChildren<Text>().text = "ant";
+                Page[pagei].GetComponent<Image>().sprite = ant;
+                Page[pagei].GetComponentInChildren<Text>().text = "ant";
             }
             else if (spriteflg == 3)
             {
-                page[pagei].GetComponent<Image>().sprite = cat;
-                page[pagei].GetComponentInChildren<Text>().text = "cat";
+                Page[pagei].GetComponent<Image>().sprite = cat;
+                Page[pagei].GetComponentInChildren<Text>().text = "cat";
             }
             else if (spriteflg == 4)
             {
-                page[pagei].GetComponent<Image>().sprite = lion;
-                page[pagei].GetComponentInChildren<Text>().text = "lion";
+                Page[pagei].GetComponent<Image>().sprite = lion;
+                Page[pagei].GetComponentInChildren<Text>().text = "lion";
             }
             else if (spriteflg == 5)
             {
-                page[pagei].GetComponent<Image>().sprite = bean;
-                page[pagei].GetComponentInChildren<Text>().text = "bean";
+                Page[pagei].GetComponent<Image>().sprite = bean;
+                Page[pagei].GetComponentInChildren<Text>().text = "bean";
             }
             pagei = pagei + 1;
-            if (pagei == 35)
-            {
-                endflg = false;
-            }
         }
     }
+    //ButtonSaleを押したときの処理
     public void PushButtonSale()
     {
         GameText.SetActive(true);
@@ -137,103 +137,180 @@ public class GameManager : MonoBehaviour {
         SaleButton.SetActive(false);
         YesButton.SetActive(true);
         NoButton.SetActive(true);
-
-        SaleState = true;
+        How_to_useText.SetActive(false);
+        PriceText.SetActive(true);
+        
+        saleState = true;
     }
-    
-    public void PushButtonNo()
+    //ButtonNoを押したときの処理
+    public void PushButtonCansell()
     {
         BuyButton.SetActive(true);
         SaleButton.SetActive(true);
         YesButton.SetActive(false);
         NoButton.SetActive(false);
+        How_to_useText.SetActive(true);
+        PriceText.SetActive(false);
 
-        SaleState = false;
-        SaleEnd   = false;
+        saleState = false;
+        saleEnd   = false;
+        price = 0;
+        max = 0;
+        salenum = 0;
+        pickItemnum = 0;
+
+        //選択されていたアイテムを選択解除する
+        for(int u = 0; u < 10; u++)
+        {
+            if(PickItem[u] != null)
+            {
+                PickItem[u].GetComponent<Text>().text = null;
+                PickItem[u] = null;
+            } 
+        }
+        //すべてのButtonのPickをfalseにする
+        for(int f = 0; f < 36; f++)
+        {
+            Page[f].GetComponent<ItemButton>().pick = false;
+        }
     }
+
+    //ButtonYesが押されたときの処理
     public void PushButtonSaleEnter()
     {
-        if(SaleEnd == true)
+        if(saleEnd == true)
         {
-            Allprice = Allprice + price;
+            allMoney = allMoney + price;    //すべての売却値
             GameText.SetActive(true);
             GameText.GetComponent<Text>().text = "売却値は" + price.ToString() + "です。";
-            AllMoneyText.GetComponent<Text>().text = Allprice.ToString() + "G";
+            AllMoneyText.GetComponent<Text>().text = allMoney.ToString() + "G";
             price = 0;
             for(int z = 0; z < 36; z++)
             {
-                pick = page[z].GetComponent<ItemButton>().Pick;
+                pick = Page[z].GetComponent<ItemButton>().pick;
                 if(pick == true)
                 {
-                    page[z].GetComponent<Image>().sprite = null;
-                    page[z].GetComponentInChildren<Text>().text = "";
-                    page[z].GetComponent<ItemButton>().TextnumDelete();
+                    //選択されているアイテムを消して空白にする
+                    Page[z].GetComponent<Image>().sprite = null;
+                    Page[z].GetComponentInChildren<Text>().text = null;
+                    Page[z].GetComponent<ItemButton>().TextnumDelete();
                 }
 
              salenum = 0;
             }
 
-            Max = 0;
+            pickItemnum = 0;
+            max = 0;
             Form_a_line();
+            //選択されているPickItemの中身をnullにする
+            for(int r = 0; r < 10; r++)
+            {
+                PickItem[r] = null;
+            }
         }
 
     }
 
+    //与えられた引数をpriceに足す
     public void SalePriceAdd(int AddPrice)
     {
         price = price + AddPrice;
-        SaleEnd = true;
+        saleEnd = true;
 
-        Max = Max + 1;
+        max = max + 1;
     }
 
+    //与えられた引数をpriceから引く
+    public void SalePriceTake(int TakePrice)
+    {
+        price = price - TakePrice;
+        max = max - 1;
+    }
+
+    //選択されたアイテムに入れる番号を返す
     public int SalenumAdd()
     {
         salenum = salenum + 1;
         return salenum;
     }
 
+    //アイテム欄の空白を詰める処理
     void Form_a_line()
     {
         for(int k = 0; k < 36; k++)
         {
-            last = true;
-            if(page[k].GetComponent<Image>().sprite == null)
+            if(Page[k].GetComponent<Image>().sprite == null)
             {
-                last = false;
                 for (int v = k + 1; v < 36; v++)
                 {
-                    if(page[v].GetComponent<Image>().sprite != null)
+                    if(Page[v].GetComponent<Image>().sprite != null)
                     {
-                        page[k].GetComponent<Image>().sprite = page[v].GetComponent<Image>().sprite;
-                        if(page[k].GetComponent<Image>().sprite == bone)
+                        Page[k].GetComponent<Image>().sprite = Page[v].GetComponent<Image>().sprite;
+                        if(Page[k].GetComponent<Image>().sprite == bone)
                         {
-                            page[k].GetComponentInChildren<Text>().text = "bone";
+                            Page[k].GetComponentInChildren<Text>().text = "bone";
                         }
-                        else if (page[k].GetComponent<Image>().sprite == ant)
+                        else if (Page[k].GetComponent<Image>().sprite == ant)
                         {
-                            page[k].GetComponentInChildren<Text>().text = "ant";
+                            Page[k].GetComponentInChildren<Text>().text = "ant";
                         }
-                        else if (page[k].GetComponent<Image>().sprite == cat)
+                        else if (Page[k].GetComponent<Image>().sprite == cat)
                         {
-                            page[k].GetComponentInChildren<Text>().text = "cat";
+                            Page[k].GetComponentInChildren<Text>().text = "cat";
                         }
-                        else if (page[k].GetComponent<Image>().sprite == lion)
+                        else if (Page[k].GetComponent<Image>().sprite == lion)
                         {
-                            page[k].GetComponentInChildren<Text>().text = "lion";
+                            Page[k].GetComponentInChildren<Text>().text = "lion";
                         }
-                        else if (page[k].GetComponent<Image>().sprite == bean)
+                        else if (Page[k].GetComponent<Image>().sprite == bean)
                         {
-                            page[k].GetComponentInChildren<Text>().text = "bean";
+                            Page[k].GetComponentInChildren<Text>().text = "bean";
                         }
-                        page[v].GetComponent<Image>().sprite = null;
-                        page[v].GetComponentInChildren<Text>().text = "";
+                        Page[v].GetComponent<Image>().sprite = null;
+                        Page[v].GetComponentInChildren<Text>().text = "";
                         k = k + 1;
-                        last = true;
                     }
                 }
                     pagei = k;
                     break;
+            }
+        }
+    }
+
+    //選択されているアイテムを配列に入れる処理
+    public void Pick(GameObject TenItem)
+    {
+        PickItem[pickItemnum] = TenItem;
+        pickItemnum = pickItemnum + 1;
+    }
+
+    //選択されているアイテムを非選択状態に戻す処理
+    public void CansellPick(GameObject ReduceItem)
+    {
+        salenum = salenum - 1;
+        pickItemnum = pickItemnum - 1;
+        for(int e = 0; e < 10; e++)
+        {
+            //PickItemの中身と引数のobjectが一致したとき
+            if(PickItem[e] == ReduceItem)
+            {
+                int l = e + 1;
+                PickItem[e].GetComponent<Text>().text = null;   //中身をnullにする
+                PickItem[e] = null;
+                for (int q = e; q < 9; q++)     //配列の空白を詰め表示されている数字を変える
+                {
+                    if (PickItem[q + 1] != null)
+                    {
+                        PickItem[q] = PickItem[q + 1];
+                        PickItem[q + 1] = null;
+                        PickItem[q].GetComponent<Text>().text = l.ToString();
+                        l = l + 1;
+                        if (e == 0)
+                        {
+                            PickItem[e].GetComponent<Text>().text = "1";
+                        }
+                    }
+                }
             }
         }
     }

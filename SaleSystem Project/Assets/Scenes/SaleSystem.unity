@@ -249,7 +249,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 523197080}
-  Pick: 0
+  pick: 0
 --- !u!1 &18289064
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +432,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 118440517}
-  Pick: 0
+  pick: 0
 --- !u!1 &53132361
 GameObject:
   m_ObjectHideFlags: 0
@@ -570,7 +570,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 227854078}
-  Pick: 0
+  pick: 0
 --- !u!1 &79336273
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,7 +830,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1269163444}
-  Pick: 0
+  pick: 0
 --- !u!1 &118440517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1290331871}
-  Pick: 0
+  pick: 0
 --- !u!1 &138127798
 GameObject:
   m_ObjectHideFlags: 0
@@ -1702,7 +1702,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1670971922}
-  Pick: 0
+  pick: 0
 --- !u!1 &255733802
 GameObject:
   m_ObjectHideFlags: 0
@@ -2180,7 +2180,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 824093110}
-  Pick: 0
+  pick: 0
 --- !u!1 &364016050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2318,82 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 499940423}
-  Pick: 0
+  pick: 0
+--- !u!1 &417390187
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 417390188}
+  - component: {fileID: 417390190}
+  - component: {fileID: 417390189}
+  m_Layer: 5
+  m_Name: how_to_use_Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &417390188
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417390187}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -46.90001, y: 201, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 580570305}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -46.9, y: 201}
+  m_SizeDelta: {x: 226.1, y: 78}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &417390189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417390187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Buy  = \u9069\u5F53\u306B\u30A2\u30A4\u30C6\u30E0\u3092\u624B\u306B\u5165\u308C\u307E\u3059\nSale
+    = \u30A2\u30A4\u30C6\u30E0\u58F2\u5374 "
+--- !u!222 &417390190
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417390187}
 --- !u!1 &427503447
 GameObject:
   m_ObjectHideFlags: 0
@@ -2679,7 +2754,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 546939867}
-  Pick: 0
+  pick: 0
 --- !u!1 &438366941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,7 +3190,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 590527037}
-  Pick: 0
+  pick: 0
 --- !u!1 &472538482
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3403,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1542824322}
-  Pick: 0
+  pick: 0
 --- !u!1 &483515345
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,7 +3541,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 438366941}
-  Pick: 0
+  pick: 0
 --- !u!1 &487652148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3604,7 +3679,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 464018874}
-  Pick: 0
+  pick: 0
 --- !u!1 &489101160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,7 +3817,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1470048577}
-  Pick: 0
+  pick: 0
 --- !u!1 &499940423
 GameObject:
   m_ObjectHideFlags: 0
@@ -4493,7 +4568,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 173306138}
-  Pick: 0
+  pick: 0
 --- !u!1 &578743846
 GameObject:
   m_ObjectHideFlags: 0
@@ -4664,6 +4739,8 @@ RectTransform:
   - {fileID: 760168536}
   - {fileID: 1435588973}
   - {fileID: 946730789}
+  - {fileID: 417390188}
+  - {fileID: 1507666729}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4957,7 +5034,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 966487838}
-  Pick: 0
+  pick: 0
 --- !u!1 &643364703
 GameObject:
   m_ObjectHideFlags: 0
@@ -5095,7 +5172,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 957845542}
-  Pick: 0
+  pick: 0
 --- !u!1 &651148096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5848,7 +5925,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1922461615}
-  Pick: 0
+  pick: 0
 --- !u!1 &815308634
 GameObject:
   m_ObjectHideFlags: 0
@@ -6061,7 +6138,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 2134558115}
-  Pick: 0
+  pick: 0
 --- !u!1 &824093110
 GameObject:
   m_ObjectHideFlags: 0
@@ -6318,7 +6395,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 712724448}
-  Pick: 0
+  pick: 0
 --- !u!1 &896031172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7097,7 +7174,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1443146752}
-  Pick: 0
+  pick: 0
 --- !u!1 &995710468
 GameObject:
   m_ObjectHideFlags: 0
@@ -7235,7 +7312,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 578743846}
-  Pick: 0
+  pick: 0
 --- !u!1 &996414302
 GameObject:
   m_ObjectHideFlags: 0
@@ -7447,7 +7524,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 996414302}
-  Pick: 0
+  pick: 0
 --- !u!1 &1002583783
 GameObject:
   m_ObjectHideFlags: 0
@@ -7797,7 +7874,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1180862428}
-  Pick: 0
+  pick: 0
 --- !u!1 &1056306463
 GameObject:
   m_ObjectHideFlags: 0
@@ -7935,7 +8012,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 686148818}
-  Pick: 0
+  pick: 0
 --- !u!1 &1062454364
 GameObject:
   m_ObjectHideFlags: 0
@@ -8222,7 +8299,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 154508470}
-  Pick: 0
+  pick: 0
 --- !u!1 &1172974463
 GameObject:
   m_ObjectHideFlags: 0
@@ -8360,7 +8437,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1583108253}
-  Pick: 0
+  pick: 0
 --- !u!1 &1180862428
 GameObject:
   m_ObjectHideFlags: 0
@@ -8572,7 +8649,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 586070598}
-  Pick: 0
+  pick: 0
 --- !u!1 &1220434917
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,15 +8677,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6358b88b1d010a4eba654d19c79f3a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pages: {fileID: 1325936740}
-  pagenum: {fileID: 1930437525}
+  Pages: {fileID: 1325936740}
+  Pagenum: {fileID: 1930437525}
   GameText: {fileID: 255733802}
   AllMoneyText: {fileID: 946730788}
+  How_to_useText: {fileID: 417390187}
+  PriceText: {fileID: 1507666728}
   BuyButton: {fileID: 521520671}
   SaleButton: {fileID: 703620256}
   YesButton: {fileID: 760168535}
   NoButton: {fileID: 1435588972}
-  page:
+  Page:
   - {fileID: 990728701}
   - {fileID: 796245052}
   - {fileID: 1224562559}
@@ -8645,7 +8724,18 @@ MonoBehaviour:
   - {fileID: 1813900549}
   - {fileID: 1219058507}
   - {fileID: 1351195615}
-  Max: 0
+  PickItem:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  max: 0
   price: 0
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   bone: {fileID: 21300000, guid: fa72c8d095a292d44b415d0d731924ed, type: 3}
@@ -8653,7 +8743,7 @@ MonoBehaviour:
   cat: {fileID: 21300000, guid: a4bc1fdc645d1774aae266029dfae7ba, type: 3}
   lion: {fileID: 21300000, guid: d27ae3dfa3c343c46a21f86fbcaab3e0, type: 3}
   bean: {fileID: 21300000, guid: 35a9a389d7e8f0940a1e3cf871e33798, type: 3}
-  SaleState: 0
+  saleState: 0
 --- !u!4 &1220434919
 Transform:
   m_ObjectHideFlags: 0
@@ -8804,7 +8894,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 2116151756}
-  Pick: 0
+  pick: 0
 --- !u!1 &1237733639
 GameObject:
   m_ObjectHideFlags: 0
@@ -8942,7 +9032,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1062454364}
-  Pick: 0
+  pick: 0
 --- !u!1 &1266462917
 GameObject:
   m_ObjectHideFlags: 0
@@ -9558,7 +9648,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1961822853}
-  Pick: 0
+  pick: 0
 --- !u!1 &1351195615
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,7 +9786,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1266462917}
-  Pick: 0
+  pick: 0
 --- !u!1 &1407158613
 GameObject:
   m_ObjectHideFlags: 0
@@ -9999,7 +10089,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1220434918}
-        m_MethodName: PushButtonNo
+        m_MethodName: PushButtonCansell
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10417,6 +10507,81 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1499147715}
+--- !u!1 &1507666728
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1507666729}
+  - component: {fileID: 1507666731}
+  - component: {fileID: 1507666730}
+  m_Layer: 5
+  m_Name: PriceText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1507666729
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507666728}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -69.65, y: 145.35, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 580570305}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -69.649994, y: 145.35}
+  m_SizeDelta: {x: 180.7, y: 184.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1507666730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507666728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 20
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\u30E9\u30A4\u30AA\u30F3 = 200\n\u30CD\u30B3\u3000\u3000 = 50\n\u30A2\u30EA\u3000\u3000
+    = 5\n\u30DE\u30E1\u3000\u3000 = 2\n\u30DB\u30CD\u3000\u3000 = 1\n"
+--- !u!222 &1507666731
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1507666728}
 --- !u!1 &1542824322
 GameObject:
   m_ObjectHideFlags: 0
@@ -10778,7 +10943,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 1919605654}
-  Pick: 0
+  pick: 0
 --- !u!1 &1583108253
 GameObject:
   m_ObjectHideFlags: 0
@@ -11364,7 +11529,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 431581297}
-  Pick: 0
+  pick: 0
 --- !u!1 &1841912090
 GameObject:
   m_ObjectHideFlags: 0
@@ -11502,7 +11667,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 434655092}
-  Pick: 0
+  pick: 0
 --- !u!1 &1851245370
 GameObject:
   m_ObjectHideFlags: 0
@@ -12085,7 +12250,7 @@ MonoBehaviour:
   saledate: {fileID: 11400000, guid: 20da4b252442b4d4d913d0512c1e083c, type: 2}
   GameManager: {fileID: 1220434917}
   Textnum: {fileID: 656783153}
-  Pick: 0
+  pick: 0
 --- !u!1 &1961822853
 GameObject:
   m_ObjectHideFlags: 0
