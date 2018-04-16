@@ -49,6 +49,8 @@ public class ItemButton : MonoBehaviour {
                     salenum = GameManager.GetComponent<GameManager>().SalenumAdd();
                     Textnum.GetComponent<Text>().text = salenum.ToString();
                     pick = true;
+
+                    GetComponent<Image>().color = Color.gray;
                 }
             }
         }
@@ -66,6 +68,7 @@ public class ItemButton : MonoBehaviour {
                 }
             }
             pick = false;
+            GetComponent<Image>().color = Color.white;
         }
     }
 

@@ -166,12 +166,14 @@ public class GameManager : MonoBehaviour {
             {
                 PickItem[u].GetComponent<Text>().text = null;
                 PickItem[u] = null;
+                
             } 
         }
         //すべてのButtonのPickをfalseにする
         for(int f = 0; f < 36; f++)
         {
             Page[f].GetComponent<ItemButton>().pick = false;
+            Page[f].GetComponent<Image>().color = Color.white;
         }
     }
 
@@ -194,6 +196,7 @@ public class GameManager : MonoBehaviour {
                     Page[z].GetComponent<Image>().sprite = null;
                     Page[z].GetComponentInChildren<Text>().text = null;
                     Page[z].GetComponent<ItemButton>().TextnumDelete();
+                    Page[z].GetComponent<Image>().color = Color.white;
                 }
 
              salenum = 0;
